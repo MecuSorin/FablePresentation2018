@@ -914,7 +914,7 @@ results in
 
 ![Elmish architecture](images/elmish.png)<!-- .element height="50%" width="50%" -->
 
-***
+---
 
 ## Elmish resources
 
@@ -924,6 +924,14 @@ results in
 * Fable [powerpack](https://github.com/fable-compiler/fable-powerpack)
 * [HTML to elmish](https://mangelmaxime.github.io/html-to-elmish/)
 
+***
+
 ### Demo time
 
+* [Minesweeper](https://www.youtube.com/watch?v=_jCwsmrd-mM&t=5s)
+
+***
+
 ### Questions?
+
+# Thank You!
