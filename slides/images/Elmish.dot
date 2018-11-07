@@ -1,0 +1,34 @@
+digraph g {
+    // https://dreampuf.github.io/GraphvizOnline/
+    # nodes
+    node [shape = box];
+    #m [label="Model"];
+    v [label="View"];
+    u [label="Update"];
+    s [label="Subscription"];
+    sagg [label="+", shape=diamond, size=3]
+    e [label="Elmish Engine", fillcolor=yellow, style="rounded,filled", shape=diamond];
+    i [label="Init"];
+    
+    ranksep=2
+    // { rank=same; u v }
+    //{ rankdir=TB; v s}
+    { rank=same; rankdir=TB; i s sagg e}
+    { rank=same; rankdir=LR; e sagg }
+    
+    
+
+    # edges
+    edge [fontsize=7];
+   
+    edge [label="Model", color=red];
+    e -> v [label="Model, Dispatcher"];
+    e -> u [label="Model, Msg"];
+    // u -> e;
+    edge [label="Cmd", color=blue];
+    s -> sagg -> e
+    v -> sagg
+    edge [style=dotted]
+    u -> sagg
+    i -> e;# -> m;
+}
